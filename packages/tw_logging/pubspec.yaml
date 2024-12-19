@@ -1,0 +1,37 @@
+name: tw_logging
+publish_to: none
+version: 0.0.1
+
+environment:
+  sdk: ^3.6.0
+  flutter: ">=3.27.0"
+
+resolution: workspace
+
+dependencies:
+  flutter:
+    sdk: flutter
+  logger: ^2.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  import_sorter: ^4.6.0
+  import_path_converter: ^1.0.1
+
+import_path_converter:
+  ignore_files:
+    - \/*\.test.dart
+    - \/*\.freezed.dart
+    - \/*\.g.dart
+    - \/*\.mocks.dart
+    - \/*\.gen.dart
+
+import_sorter:
+  comments: false
+  ignore_files:
+    - \/*\.freezed.dart
+    - \/*\.g.dart
+    - \/*\.mocks.dart
+    - \/*\.gen.dart
