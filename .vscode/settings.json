@@ -1,0 +1,30 @@
+{
+    "editor.tabSize": 2,
+    "editor.rulers": [ 
+        80
+    ],
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.exclude": {
+        "**/.idea": true,
+        "**/.dart_tool": true,
+        "**/*.log": true,
+        "**/*.iml": true,
+        "**/build": true
+    },
+    "extensions.ignoreRecommendations": false,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "never",
+            "source.fixAll": "explicit"
+        },
+    },
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.flutter-plugins,.flutter-plugins-dependencies,.metadata",
+        "*.dart": "${capture}.g.dart,${capture}.freezed.dart,${capture}.controller.dart"
+    },
+    "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.27.1-stable"
+}
