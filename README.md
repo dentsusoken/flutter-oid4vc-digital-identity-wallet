@@ -41,14 +41,17 @@ Flutter project.
     dart run slang
   ```
 
-## 他のMakeコマンド
+## Makeコマンド(MacOSのみ)
   
   ```bash
+  # flavorizrで設定した内容を反映する
+  make flavor
+
   # build_runnerを実行する
   make build-runner
 
   # freezed、providerなどのファイルの変更を監視し、コード生成を行う
-  build-runner-watch
+  make build-runner-watch
 
   # import 文の並べ替えとコードのフォーマットを行う
   make lint-fix
@@ -58,6 +61,9 @@ Flutter project.
 
   # スプラッシュ生成を行う
   make gen-splash
+
+  # lib/i18n/*.yamlから多言語対応コード生成を行う
+  make slang
 
   # lib/i18n/*.yamlの変更を監視し、多言語対応コード生成を行う
   make slang-watch
