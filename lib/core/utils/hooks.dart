@@ -8,15 +8,9 @@ void execAfterMount(VoidCallback callback) {
   });
 }
 
-void useDidMount(
-  VoidCallback callback, [
-  VoidCallback? cleanup,
-]) {
-  useEffect(
-    () {
-      execAfterMount(callback);
-      return cleanup;
-    },
-    [],
-  );
+void useDidMount(VoidCallback callback, [VoidCallback? cleanup]) {
+  useEffect(() {
+    execAfterMount(callback);
+    return cleanup;
+  }, []);
 }

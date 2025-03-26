@@ -16,9 +16,7 @@ class TypeGuard {
     throw const InvalidRefException();
   }
 
-  static T widget<T extends Widget>(dynamic ref, dynamic provider) {
-    ref(ref);
-
+  static T widget<T extends Widget>(dynamic ref, ProviderListenable<T> provider) {
     if (provider is Provider<T> ||
         provider is FutureProvider<T> ||
         provider is StateProvider<T> ||
@@ -31,7 +29,7 @@ class TypeGuard {
         provider is AutoDisposeFutureProvider<T> ||
         provider is AutoDisposeStateProvider<T> ||
         provider is AutoDisposeStreamProvider<T>) {
-      return ref.watch(provider);
+      return TypeGuard.ref<T>(ref).watch(provider);
     }
 
     throw const InvalidProviderException();

@@ -70,19 +70,10 @@ class RefWrapper {
   }) {
     switch (ref) {
       case final Ref v:
-        final subscription = v.listen(
-          provider,
-          listener,
-          onError: onError,
-          fireImmediately: fireImmediately,
-        );
+        final subscription = v.listen(provider, listener, onError: onError, fireImmediately: fireImmediately);
         return _RefProviderSubscriptionWrapper(subscription);
       case final WidgetRef v:
-        v.listen(
-          provider,
-          listener,
-          onError: onError,
-        );
+        v.listen(provider, listener, onError: onError);
         return _NullProviderSubscriptionWrapper();
       default:
         throw const InvalidRefException();
@@ -162,8 +153,7 @@ abstract class ProviderSubscriptionWrapper<State> {
   void close();
 }
 
-class _NullProviderSubscriptionWrapper<State>
-    implements ProviderSubscriptionWrapper<State> {
+class _NullProviderSubscriptionWrapper<State> implements ProviderSubscriptionWrapper<State> {
   @override
   bool get closed => true;
 
@@ -176,8 +166,7 @@ class _NullProviderSubscriptionWrapper<State>
   }
 }
 
-class _RefProviderSubscriptionWrapper<State>
-    extends ProviderSubscriptionWrapper<State> {
+class _RefProviderSubscriptionWrapper<State> extends ProviderSubscriptionWrapper<State> {
   _RefProviderSubscriptionWrapper(this.source);
 
   final ProviderSubscription<State> source;

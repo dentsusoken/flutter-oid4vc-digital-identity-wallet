@@ -4,11 +4,7 @@ import 'package:digital_wallet/core/infrastructure/infrastructure.dart';
 
 class ProviderLogger extends ProviderObserver {
   @override
-  void didAddProvider(
-    ProviderBase<Object?> provider,
-    Object? value,
-    ProviderContainer container,
-  ) {
+  void didAddProvider(ProviderBase<Object?> provider, Object? value, ProviderContainer container) {
     logger.trace('''did add provider:
 {
   "provider": "${provider.name ?? provider.runtimeType}",
@@ -45,10 +41,7 @@ class ProviderLogger extends ProviderObserver {
   }
 
   @override
-  void didDisposeProvider(
-    ProviderBase<Object?> provider,
-    ProviderContainer container,
-  ) {
+  void didDisposeProvider(ProviderBase<Object?> provider, ProviderContainer container) {
     logger.trace('''did dispose provider:
 {
   "provider": "${provider.name ?? provider.runtimeType}",
