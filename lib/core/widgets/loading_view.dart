@@ -31,18 +31,15 @@ class LoadingView extends HookWidget {
           onEnd: () {
             isDisabledLoadingView.value = isLoaded;
           },
-          child: isDisabledLoadingView.value
-              ? const SizedBox()
-              : Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: loadingView?.call() ??
-                      SizedBox(
-                        height: loadingHeight,
-                        child: const Center(
-                          child: CircularProgressIndicator(),
-                        ),
-                      ),
-                ),
+          child:
+              isDisabledLoadingView.value
+                  ? const SizedBox()
+                  : Padding(
+                    padding: const EdgeInsets.all(16),
+                    child:
+                        loadingView?.call() ??
+                        SizedBox(height: loadingHeight, child: const Center(child: CircularProgressIndicator())),
+                  ),
         ),
         AnimatedOpacity(
           opacity: isLoaded ? 1 : 0,

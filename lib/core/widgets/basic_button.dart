@@ -5,13 +5,7 @@ import 'package:digital_wallet/core/widgets/widgets.dart';
 import 'package:digital_wallet/gen/gen.dart';
 
 class BasicButton {
-  const BasicButton({
-    required this.text,
-    required this.onPressed,
-    this.width,
-    this.leading,
-    this.trailing,
-  });
+  const BasicButton({required this.text, required this.onPressed, this.width, this.leading, this.trailing});
 
   final double? width;
   final String text;
@@ -19,9 +13,7 @@ class BasicButton {
   final Widget? trailing;
   final VoidCallback onPressed;
 
-  Widget primary({
-    bool enabled = true,
-  }) {
+  Widget primary({bool enabled = true}) {
     return _BaseButton(
       text: text,
       leading: leading,
@@ -37,9 +29,7 @@ class BasicButton {
     );
   }
 
-  Widget secondary({
-    bool enabled = true,
-  }) {
+  Widget secondary({bool enabled = true}) {
     return _BaseButton(
       text: text,
       leading: leading,
@@ -55,9 +45,7 @@ class BasicButton {
     );
   }
 
-  Widget danger({
-    bool enabled = true,
-  }) {
+  Widget danger({bool enabled = true}) {
     return _BaseButton(
       text: text,
       leading: leading,
@@ -73,9 +61,7 @@ class BasicButton {
     );
   }
 
-  Widget outline({
-    bool enabled = true,
-  }) {
+  Widget outline({bool enabled = true}) {
     return _OutlineButton(
       text: text,
       leading: leading,
@@ -84,9 +70,7 @@ class BasicButton {
       enabled: enabled,
       onPressed: onPressed,
       style: OutlinedButton.styleFrom(
-        side: BorderSide(
-          color: enabled ? AppColors.silver : AppColors.grey,
-        ),
+        side: BorderSide(color: enabled ? AppColors.silver : AppColors.grey),
         foregroundColor: AppColors.black,
         backgroundColor: AppColors.white,
         textStyle: AppTextStyle.button,
@@ -127,10 +111,7 @@ class _BaseButton extends StatelessWidget {
             spacing: Measure.s_4,
             children: [
               if (leading != null) leading!,
-              Text(
-                text,
-                textAlign: TextAlign.center,
-              ),
+              Text(text, textAlign: TextAlign.center),
               if (trailing != null) trailing!,
             ],
           ),
@@ -173,10 +154,7 @@ class _OutlineButton extends StatelessWidget {
             spacing: Measure.s_4,
             children: [
               if (leading != null) leading!,
-              Text(
-                text,
-                textAlign: TextAlign.center,
-              ),
+              Text(text, textAlign: TextAlign.center),
               if (trailing != null) trailing!,
             ],
           ),

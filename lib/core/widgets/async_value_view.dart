@@ -37,15 +37,14 @@ class AsyncValueView<T> extends HookWidget {
       error: (err, _) {
         return Padding(
           padding: const EdgeInsets.all(16),
-          child: error?.call(err) ??
+          child:
+              error?.call(err) ??
               Text(
                 err.toString(),
                 textAlign: TextAlign.left,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: AppTextStyle.body1.copyWith(
-                  color: AppColors.red,
-                ),
+                style: AppTextStyle.body1.copyWith(color: AppColors.red),
               ),
         );
       },
@@ -62,14 +61,12 @@ class AsyncValueView<T> extends HookWidget {
         return LoadingView(
           isLoaded: isLoaded,
           loadingView: loading != null ? () => loading! : null,
-          loadedView: v != null
-              ? () {
-                  return Container(
-                    color: backgroundColor ?? AppColors.white,
-                    child: data(v),
-                  );
-                }
-              : null,
+          loadedView:
+              v != null
+                  ? () {
+                    return Container(color: backgroundColor ?? AppColors.white, child: data(v));
+                  }
+                  : null,
         );
       },
     );

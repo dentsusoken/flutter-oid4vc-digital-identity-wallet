@@ -7,10 +7,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:digital_wallet/gen/colors.gen.dart';
 
 class AppSecureOverlay extends HookConsumerWidget {
-  const AppSecureOverlay({
-    required this.child,
-    super.key,
-  });
+  const AppSecureOverlay({required this.child, super.key});
 
   final Widget child;
 
@@ -24,10 +21,6 @@ class AppSecureOverlay extends HookConsumerWidget {
       return child;
     }
 
-    return Blur(
-      blur: _kBlurValue,
-      blurColor: AppColors.white,
-      child: child,
-    );
+    return Blur(blur: _kBlurValue, blurColor: AppColors.white, child: child);
   }
 }

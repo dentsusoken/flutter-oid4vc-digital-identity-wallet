@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:app_links/app_links.dart';
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -16,9 +15,7 @@ import 'package:digital_wallet/flavors.dart';
 import 'package:digital_wallet/gen/gen.dart';
 
 class WalletApp extends HookConsumerWidget {
-  const WalletApp({
-    super.key,
-  });
+  const WalletApp({super.key});
 
   static final provider = Provider<WalletApp>((_) => const WalletApp());
 
@@ -70,19 +67,11 @@ class WalletApp extends HookConsumerWidget {
       locale: TranslationProvider.of(context).flutterLocale,
       supportedLocales: AppLocaleUtils.supportedLocales,
       localizationsDelegates: GlobalMaterialLocalizations.delegates,
-      builder: (context, child) => DevicePreview.appBuilder(
-        context,
-        MediaQuery(
-          data: MediaQuery.of(context).copyWith(
-            textScaler: const TextScaler.linear(1),
+      builder:
+          (context, child) => MediaQuery(
+            data: MediaQuery.of(context).copyWith(textScaler: const TextScaler.linear(1)),
+            child: AppSecureOverlay(child: AppLoadingOverlay(child: child!)),
           ),
-          child: AppSecureOverlay(
-            child: AppLoadingOverlay(
-              child: child!,
-            ),
-          ),
-        ),
-      ),
     );
   }
 }

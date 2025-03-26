@@ -27,22 +27,13 @@ class TapDetector extends StatelessWidget {
       data: ThemeData(
         splashColor: backgroundColor.withValues(alpha: splashOpacity),
         splashFactory: NoSplash.splashFactory,
-        highlightColor:
-            onTap == null || isDisabledSplash ? Colors.transparent : null,
+        highlightColor: onTap == null || isDisabledSplash ? Colors.transparent : null,
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(borderRadius),
         child: Container(
-          decoration: BoxDecoration(
-            color: backgroundColor,
-          ),
-          child: Material(
-            color: Colors.transparent,
-            child: InkWell(
-              onTap: onTap,
-              child: child,
-            ),
-          ),
+          decoration: BoxDecoration(color: backgroundColor),
+          child: Material(color: Colors.transparent, child: InkWell(onTap: onTap, child: child)),
         ),
       ),
     );
