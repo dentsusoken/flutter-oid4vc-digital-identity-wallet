@@ -14,12 +14,12 @@ android {
         dev {
             dimension "flavor-type"
             applicationId "com.dentsusoken.TrustedWeb.DigitalWallet.Dev"
-            resValue "string", "app_name", "Digital Wallet Dev"
+            resValue "string", "app_name", "TW Wallet Dev"
         }
         prod {
             dimension "flavor-type"
             applicationId "com.dentsusoken.TrustedWeb.DigitalWallet"
-            resValue "string", "app_name", "Digital Wallet"
+            resValue "string", "app_name", "TW Wallet"
         }
     }
 
@@ -27,7 +27,7 @@ android {
 
    namespace = "com.example.digital_wallet"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "28.0.13004108"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
