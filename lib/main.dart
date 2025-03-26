@@ -6,7 +6,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:digital_wallet/core/providers/providers.dart';
-import 'package:digital_wallet/core/utils/provider_logger.dart';
+import 'package:digital_wallet/core/utils/utils.dart';
 import 'package:digital_wallet/core/widgets/widgets.dart';
 import 'package:digital_wallet/gen/gen.dart';
 
@@ -19,15 +19,9 @@ FutureOr<void> main() async {
 
   runApp(
     ProviderScope(
-      overrides: [
-        sharedPreferencesProvider.overrideWithValue(sharedPreferences),
-      ],
-      observers: [
-        ProviderLogger(),
-      ],
-      child: TranslationProvider(
-        child: const WalletApp(),
-      ),
+      overrides: [sharedPreferencesProvider.overrideWithValue(sharedPreferences)],
+      observers: [ProviderLogger()],
+      child: TranslationProvider(child: const WalletApp()),
     ),
   );
 }
