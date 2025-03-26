@@ -3,5 +3,5 @@
 
 FLUTTER_TARGET=lib/main_dev.dart
 ASSET_PREFIX=dev
-BUNDLE_NAME=Digital Wallet Dev
-BUNDLE_DISPLAY_NAME=Digital Wallet Dev
+BUNDLE_NAME=TW Wallet Dev
+BUNDLE_DISPLAY_NAME=TW Wallet Dev

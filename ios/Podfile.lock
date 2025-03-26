@@ -10,7 +10,6 @@ PODS:
     - Flutter
   - fluttertoast (0.0.2):
     - Flutter
-    - Toast
   - "no_screenshot (0.0.1+4)":
     - Flutter
     - ScreenProtectorKit (~> 1.3.1)
@@ -23,10 +22,6 @@ PODS:
   - shared_preferences_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - sqflite_darwin (0.0.4):
-    - Flutter
-    - FlutterMacOS
-  - Toast (4.1.1)
   - tw_crypto (0.0.1):
     - Flutter
   - url_launcher_ios (0.0.1):
@@ -43,14 +38,12 @@ DEPENDENCIES:
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
-  - sqflite_darwin (from `.symlinks/plugins/sqflite_darwin/darwin`)
   - tw_crypto (from `.symlinks/plugins/tw_crypto/ios`)
   - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
 
 SPEC REPOS:
   trunk:
     - ScreenProtectorKit
-    - Toast
 
 EXTERNAL SOURCES:
   app_links:
@@ -73,29 +66,25 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
   shared_preferences_foundation:
     :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
-  sqflite_darwin:
-    :path: ".symlinks/plugins/sqflite_darwin/darwin"
   tw_crypto:
     :path: ".symlinks/plugins/tw_crypto/ios"
   url_launcher_ios:
     :path: ".symlinks/plugins/url_launcher_ios/ios"
 
 SPEC CHECKSUMS:
-  app_links: e7a6750a915a9e161c58d91bc610e8cd1d4d0ad0
-  device_info_plus: bf2e3232933866d73fe290f2942f2156cdd10342
+  app_links: 76b66b60cc809390ca1ad69bfd66b998d2387ac7
+  device_info_plus: 21fcca2080fbcd348be798aa36c3e5ed849eefbe
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  flutter_native_splash: e8a1e01082d97a8099d973f919f57904c925008a
-  flutter_secure_storage: d33dac7ae2ea08509be337e775f6b59f1ff45f12
-  fluttertoast: e9a18c7be5413da53898f660530c56f35edfba9c
-  no_screenshot: 67d110f12466f4913b488803d4e498d03ef2889e
-  package_info_plus: c0502532a26c7662a62a356cebe2692ec5fe4ec4
-  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
+  flutter_native_splash: 6cad9122ea0fad137d23137dd14b937f3e90b145
+  flutter_secure_storage: 1ed9476fba7e7a782b22888f956cce43e2c62f13
+  fluttertoast: 2c67e14dce98bbdb200df9e1acf610d7a6264ea1
+  no_screenshot: 6d183496405a3ab709a67a54e5cd0f639e94729e
+  package_info_plus: af8e2ca6888548050f16fa2f1938db7b5a5df499
+  path_provider_foundation: 080d55be775b7414fd5a5ef3ac137b97b097e564
   ScreenProtectorKit: 83a6281b02c7a5902ee6eac4f5045f674e902ae4
-  shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
-  sqflite_darwin: 5a7236e3b501866c1c9befc6771dfd73ffb8702d
-  Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
-  tw_crypto: ccffc4db5d8bb68562bd8760f3ac376289e7c76c
-  url_launcher_ios: 5334b05cef931de560670eeae103fd3e431ac3fe
+  shared_preferences_foundation: 9e1978ff2562383bd5676f64ec4e9aa8fa06a6f7
+  tw_crypto: eae7a3a1f908063d9d24c8b9a177c260776f2e6b
+  url_launcher_ios: 694010445543906933d732453a59da0a173ae33d
 
 PODFILE CHECKSUM: 1020986cd62138e067ea6745186be484fd38c9f0
 
