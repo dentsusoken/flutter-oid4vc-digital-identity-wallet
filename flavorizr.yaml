@@ -10,34 +10,32 @@ instructions:
   - flutter:flavors
   - android:buildGradle
   - android:androidManifest
-  - android:dummyAssets
-  - android:icons
   - ios:podfile
   - ios:xcconfig
   - ios:buildTargets
   - ios:schema
-  - ios:dummyAssets
-  - ios:icons
   - ios:plist
   - assets:clean
 
 flavors:
   dev:
     app:
-      name: "Digital Wallet Dev"
+      name: "TW Wallet Dev"
     android:
       applicationId: "com.dentsusoken.TrustedWeb.DigitalWallet.Dev"
-      icon: "assets/images/app/app_icon_dev.png"
     ios:
       bundleId: "com.dentsusoken.TrustedWeb.DigitalWallet.Dev"
-      icon: "assets/images/app/app_icon_dev.png"
+      buildSettings:
+        FLUTTER_FLAVOR: "dev"
+        ASSETCATALOG_COMPILER_APPICON_NAME: "AppIcon-$(FLUTTER_FLAVOR)"
 
   prod:
     app:
-      name: "Digital Wallet"
+      name: "TW Wallet"
     android:
       applicationId: "com.dentsusoken.TrustedWeb.DigitalWallet"
-      icon: "assets/images/app/app_icon.png"
     ios:
       bundleId: "com.dentsusoken.TrustedWeb.DigitalWallet"
-      icon: "assets/images/app/app_icon.png"
+      buildSettings:
+        FLUTTER_FLAVOR: "prod"
+        ASSETCATALOG_COMPILER_APPICON_NAME: "AppIcon-$(FLUTTER_FLAVOR)"
