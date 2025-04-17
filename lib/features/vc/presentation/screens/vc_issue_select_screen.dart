@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_launcher_icons/config/config.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'package:digital_wallet/core/configs/configs.dart';
 import 'package:digital_wallet/core/theme/app_text_style.dart';
 import 'package:digital_wallet/core/widgets/widgets.dart';
 import 'package:digital_wallet/gen/gen.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class VcIssueSelectScreen extends StatelessWidget {
   const VcIssueSelectScreen({super.key});
