@@ -1197,55 +1197,49 @@
 		};
 		D7F974C42CFA225A00F80D25 /* Debug-dev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 153DE16EF29F600F80E7162A /* Pods-Runner.debug-dev.xcconfig */;
+			baseConfigurationReference = 38B83B94B7C0C36A87F714BA /* devDebug.xcconfig */;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-dev";
 		};
 		D7F974C52CFA225A00F80D25 /* Profile-dev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AC926C830BF53F7A7844F47 /* Pods-Runner.profile-dev.xcconfig */;
+			baseConfigurationReference = 3D5FE5E0A739BEC2911F96D6 /* devProfile.xcconfig */;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-dev";
 		};
 		D7F974C62CFA225A00F80D25 /* Release-dev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC21ADE1F6300F7E8E81BDC1 /* Pods-Runner.release-dev.xcconfig */;
+			baseConfigurationReference = A7AF911EF9D92439C16EFD7E /* devRelease.xcconfig */;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Release-dev";
 		};
 		D7F974C72CFA225A00F80D25 /* Debug-prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FB2DC3B22A3390B1B6D2C83 /* Pods-Runner.debug-prod.xcconfig */;
+			baseConfigurationReference = C0C750AF11EC5D0FC094CD53 /* prodDebug.xcconfig */;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-prod";
 		};
 		D7F974C82CFA225A00F80D25 /* Profile-prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C63863188B1D6E2A19B1FA9A /* Pods-Runner.profile-prod.xcconfig */;
+			baseConfigurationReference = 93A3C38BEE8D165815AC8D4E /* prodProfile.xcconfig */;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-prod";
 		};
 		D7F974C92CFA225A00F80D25 /* Release-prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BB65BE810B453A183161042 /* Pods-Runner.release-prod.xcconfig */;
+			baseConfigurationReference = 9CBD14F2B7D9ED3BB13BF733 /* prodRelease.xcconfig */;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Release-prod";
 		};
