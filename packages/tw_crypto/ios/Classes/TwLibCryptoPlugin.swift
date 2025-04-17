@@ -15,10 +15,10 @@ public enum ECCurveType: UInt64 {
   case p521 = 3
 }
 
-public class TwLibCryptoPlugin: NSObject, FlutterPlugin {
+public class TwCryptoPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "com.dentsusoken.TrustedWeb.DigitalWallet/tw_crypto", binaryMessenger: registrar.messenger())
-    let instance = TwLibCryptoPlugin()
+    let instance = TwCryptoPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 
