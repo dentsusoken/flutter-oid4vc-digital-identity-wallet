@@ -17,7 +17,7 @@ install:
 	flutter pub get
 
 flavor:
-	dart run flutter_flavorizr
+	dart run flutter_flavorizr -p android:buildGradle,android:flavorizrGradle
 
 gen-splash:
 	dart run flutter_native_splash:create
