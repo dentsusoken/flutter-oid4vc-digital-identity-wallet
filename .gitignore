@@ -315,7 +315,6 @@ xcuserdata/
 
 # Generated files
 bin/
-gen/
 
 # Gradle files
 .gradle
