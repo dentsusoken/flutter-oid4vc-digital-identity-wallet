@@ -1,0 +1,16 @@
+name: tw_siop_openid4vp
+publish_to: none
+version: 0.0.1
+
+environment:
+  sdk: ^3.7.0
+
+resolution: workspace
+
+dependencies:
+  jose: ^0.3.4
+  tw_presentation_exchange:
+    path: ../tw_presentation_exchange
+
+dev_dependencies:
+  test: ^1.25.8

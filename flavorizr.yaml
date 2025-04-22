@@ -1,0 +1,41 @@
+app:
+  ide: "vscode"
+  android:
+    flavorDimensions: "flavor-type"
+
+instructions:
+  - assets:download
+  - assets:extract
+  - flutter:targets
+  - flutter:flavors
+  - android:buildGradle
+  - android:androidManifest
+  - ios:podfile
+  - ios:xcconfig
+  - ios:buildTargets
+  - ios:schema
+  - ios:plist
+  - assets:clean
+
+flavors:
+  dev:
+    app:
+      name: "TW Wallet Dev"
+    android:
+      applicationId: "com.dentsusoken.TrustedWeb.DigitalWallet.Dev"
+    ios:
+      bundleId: "com.dentsusoken.TrustedWeb.DigitalWallet.Dev"
+      buildSettings:
+        FLUTTER_FLAVOR: "dev"
+        ASSETCATALOG_COMPILER_APPICON_NAME: "AppIcon-$(FLUTTER_FLAVOR)"
+
+  prod:
+    app:
+      name: "TW Wallet"
+    android:
+      applicationId: "com.dentsusoken.TrustedWeb.DigitalWallet"
+    ios:
+      bundleId: "com.dentsusoken.TrustedWeb.DigitalWallet"
+      buildSettings:
+        FLUTTER_FLAVOR: "prod"
+        ASSETCATALOG_COMPILER_APPICON_NAME: "AppIcon-$(FLUTTER_FLAVOR)"

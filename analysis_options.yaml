@@ -1,0 +1,28 @@
+include: package:very_good_analysis/analysis_options.yaml
+
+formatter:
+  page_width: 120
+
+analyzer:
+  plugins:
+    - custom_lint
+  errors:
+    todo: ignore
+    invalid_annotation_target: ignore
+  exclude:
+    - "bin/cache/**"
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.mocks.dart"
+    - "**/*.gen.dart"
+
+linter:
+  rules:
+    # these rules are documented on and in the same order as
+    # the Dart Lint rules page to make maintenance easier
+    # https://github.com/dart-lang/linter/blob/master/example/all.yaml
+    public_member_api_docs: ignore
+    always_use_package_imports: true
+
+custom_lint:
+  rules:

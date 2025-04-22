@@ -1,0 +1,16 @@
+name: tw_iso18013_security
+publish_to: none
+version: 0.0.1
+
+environment:
+  sdk: ^3.7.0
+
+resolution: workspace
+
+dependencies:
+  x25519: ^0.1.1
+  tw_iso18013_data_model:
+    path: ../tw_iso18013_data_model
+
+dev_dependencies:
+  test: ^1.25.8

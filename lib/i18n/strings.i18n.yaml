@@ -1,0 +1,81 @@
+dashboard: ダッシュボード
+add_doc: VC発行
+
+vp_history: VP履歴
+vp_history_details: VP履歴詳細
+vc_type: VC種別
+member_id: 会員ID
+success: 成功
+fail: 失敗
+error: エラー
+next: つぎへ
+share: 共有
+issue: 発行
+cancel: キャンセル
+verify: 書類検証
+try_again: もう一度試す
+unknown_issuer: 発行者
+unknown_verifier: 検証者
+yes: はい
+no: いいえ
+please_wait: お待ちください...
+member_VC: 会員VC
+
+vc_issue: VC発行
+vc_issue_description: 発行するVCを選択してください
+vc_failed: 問題が発生しました！
+vc_failed_description: 書類の発行に失敗しました。もう一度お試しください。
+vc_succeeded_description: "書類が発行されました。{{ document: String }}を追加できます。"
+
+vp_share_succeeded: 検証者と情報を正常に共有しました
+vp_share_request: 検証者が下記情報の共有をリクエストしています
+vp_share_request_attention: データを共有する前に、慎重にご確認ください。
+vp_share_why_need_data: なぜあなたのデータが必要ですか？
+vp_share_document_not_found: 要求された書類は、ウォレットに存在していません。詳細については、公認発行者にお問い合わせください。
+
+document_deletion_confirm_title: "{{ document: String }} を削除しますか？"
+document_deletion_confirm_description: "削除するとこの {{ document: String }} は使用できなくなります。"
+
+age_birth_year: 何年生まれですか?
+age_in_years: あなたは何歳ですか?
+age_over: "{{ age: int }}歳以上?"
+age_verification: 年齢確認
+biometry_open_settings: 設定を開く
+nationality: 国籍
+mail_address: メールアドレス
+birth_city: 出生市
+birth_country: 出生国
+birth_date: 生年月日
+birth_place: 出生地
+birth_state: 出生州
+room_number: 部屋番号
+seat_number: 座席番号
+gender: 性別
+user_pseudonym: ニックネーム
+weight: 体重 (kg)
+issue_date: 発行日
+issuing_authority: 発行機関
+issuing_country: 発行国
+issuing_jurisdiction: 発行地
+issuance_date: 発行日
+given_name: 名
+given_name_birth: 名（出生時）
+given_name_national_character: 名（母国語）
+hair_color: 髪の色
+height: 身長 (cm)
+date_of_expiry: 効期期限
+date_of_issue: 発行日
+DHS_compliance: DHSコンプライアンス
+document_number: 文書番号
+driving_privileges: 車両区分
+EDL_credential: EDL資格
+expired: 期限切れ
+expiry_date: 有効期限日
+eye_color: 目の色
+family_name: 姓
+family_name_birth: 姓（出生時）
+family_name_national_character: 姓（母国語）
+faq_title: FAQ
+first_name: 名
+first_name_birth: 名（出生時）
+first_name_national_character: 名（母国語）
