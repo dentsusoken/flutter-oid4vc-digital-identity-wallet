@@ -4,6 +4,8 @@ import 'package:tw_logging/log_level.dart';
 import 'package:tw_logging/logger_target.dart';
 
 class ConsoleLoggerTarget extends LoggerTarget {
+  ConsoleLoggerTarget({this.level = LogLevel.trace});
+
   final _logger = Logger(
     printer: PrettyPrinter(
       stackTraceBeginIndex: 3,
@@ -12,20 +14,15 @@ class ConsoleLoggerTarget extends LoggerTarget {
       lineLength: 60,
       colors: true,
       printEmojis: true,
-      dateTimeFormat: DateTimeFormat.onlyTime,
+      dateTimeFormat: DateTimeFormat.dateAndTime,
     ),
   );
 
   @override
-  LogLevel get level => LogLevel.trace;
+  final LogLevel level;
 
   @override
-  void write(
-    LogLevel level,
-    String message, {
-    Object? error,
-    StackTrace? stackTrace,
-  }) {
+  void write(LogLevel level, String message, {Object? error, StackTrace? stackTrace}) {
     switch (level) {
       case LogLevel.trace:
         _logger.t(message);

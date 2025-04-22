@@ -10,13 +10,17 @@ String _$vpHistoryHash() => r'374d5edb697da11ab9cb0c8437d7ac2d7817149f';
 
 /// See also [vpHistory].
 @ProviderFor(vpHistory)
-final vpHistoryProvider = AutoDisposeFutureProvider<List<PresentationLog>>.internal(
-  vpHistory,
-  name: r'vpHistoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$vpHistoryHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final vpHistoryProvider =
+    AutoDisposeFutureProvider<List<PresentationLog>>.internal(
+      vpHistory,
+      name: r'vpHistoryProvider',
+      debugGetCreateSourceHash:
+          const bool.fromEnvironment('dart.vm.product')
+              ? null
+              : _$vpHistoryHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element

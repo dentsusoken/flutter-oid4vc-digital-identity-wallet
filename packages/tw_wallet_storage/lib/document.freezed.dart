@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,323 +10,183 @@ part of 'document.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-Document _$DocumentFromJson(Map<String, dynamic> json) {
-  return _Document.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Document {
-  String get id => throw _privateConstructorUsedError;
-  String get docType => throw _privateConstructorUsedError;
-  @DataJsonConverter()
-  Uint8List get data => throw _privateConstructorUsedError;
-  DocDataType get docDataType =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  PrivateKey? get privateKey => throw _privateConstructorUsedError;
-  DateTime get createdAt => throw _privateConstructorUsedError;
-  DateTime? get modifiedAt => throw _privateConstructorUsedError;
+
+ String get id; String get docType;@DataJsonConverter() Uint8List get data; DocDataType get docDataType;// ignore: invalid_annotation_target
+@JsonKey(includeFromJson: false, includeToJson: false) PrivateKey? get privateKey; DateTime get createdAt; DateTime? get modifiedAt;
+/// Create a copy of Document
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$DocumentCopyWith<Document> get copyWith => _$DocumentCopyWithImpl<Document>(this as Document, _$identity);
 
   /// Serializes this Document to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of Document
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $DocumentCopyWith<Document> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Document&&(identical(other.id, id) || other.id == id)&&(identical(other.docType, docType) || other.docType == docType)&&const DeepCollectionEquality().equals(other.data, data)&&(identical(other.docDataType, docDataType) || other.docDataType == docDataType)&&(identical(other.privateKey, privateKey) || other.privateKey == privateKey)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.modifiedAt, modifiedAt) || other.modifiedAt == modifiedAt));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,docType,const DeepCollectionEquality().hash(data),docDataType,privateKey,createdAt,modifiedAt);
+
+@override
+String toString() {
+  return 'Document(id: $id, docType: $docType, data: $data, docDataType: $docDataType, privateKey: $privateKey, createdAt: $createdAt, modifiedAt: $modifiedAt)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $DocumentCopyWith<$Res> {
-  factory $DocumentCopyWith(Document value, $Res Function(Document) then) =
-      _$DocumentCopyWithImpl<$Res, Document>;
-  @useResult
-  $Res call(
-      {String id,
-      String docType,
-      @DataJsonConverter() Uint8List data,
-      DocDataType docDataType,
-      @JsonKey(includeFromJson: false, includeToJson: false)
-      PrivateKey? privateKey,
-      DateTime createdAt,
-      DateTime? modifiedAt});
+abstract mixin class $DocumentCopyWith<$Res>  {
+  factory $DocumentCopyWith(Document value, $Res Function(Document) _then) = _$DocumentCopyWithImpl;
+@useResult
+$Res call({
+ String id, String docType,@DataJsonConverter() Uint8List data, DocDataType docDataType,@JsonKey(includeFromJson: false, includeToJson: false) PrivateKey? privateKey, DateTime createdAt, DateTime? modifiedAt
+});
 
-  $PrivateKeyCopyWith<$Res>? get privateKey;
+
+$PrivateKeyCopyWith<$Res>? get privateKey;
+
 }
-
 /// @nodoc
-class _$DocumentCopyWithImpl<$Res, $Val extends Document>
+class _$DocumentCopyWithImpl<$Res>
     implements $DocumentCopyWith<$Res> {
-  _$DocumentCopyWithImpl(this._value, this._then);
+  _$DocumentCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Document _self;
+  final $Res Function(Document) _then;
 
-  /// Create a copy of Document
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? docType = null,
-    Object? data = null,
-    Object? docDataType = null,
-    Object? privateKey = freezed,
-    Object? createdAt = null,
-    Object? modifiedAt = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      docType: null == docType
-          ? _value.docType
-          : docType // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as Uint8List,
-      docDataType: null == docDataType
-          ? _value.docDataType
-          : docDataType // ignore: cast_nullable_to_non_nullable
-              as DocDataType,
-      privateKey: freezed == privateKey
-          ? _value.privateKey
-          : privateKey // ignore: cast_nullable_to_non_nullable
-              as PrivateKey?,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      modifiedAt: freezed == modifiedAt
-          ? _value.modifiedAt
-          : modifiedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
+/// Create a copy of Document
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? docType = null,Object? data = null,Object? docDataType = null,Object? privateKey = freezed,Object? createdAt = null,Object? modifiedAt = freezed,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,docType: null == docType ? _self.docType : docType // ignore: cast_nullable_to_non_nullable
+as String,data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as Uint8List,docDataType: null == docDataType ? _self.docDataType : docDataType // ignore: cast_nullable_to_non_nullable
+as DocDataType,privateKey: freezed == privateKey ? _self.privateKey : privateKey // ignore: cast_nullable_to_non_nullable
+as PrivateKey?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime,modifiedAt: freezed == modifiedAt ? _self.modifiedAt : modifiedAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,
+  ));
+}
+/// Create a copy of Document
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PrivateKeyCopyWith<$Res>? get privateKey {
+    if (_self.privateKey == null) {
+    return null;
   }
 
-  /// Create a copy of Document
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $PrivateKeyCopyWith<$Res>? get privateKey {
-    if (_value.privateKey == null) {
-      return null;
-    }
-
-    return $PrivateKeyCopyWith<$Res>(_value.privateKey!, (value) {
-      return _then(_value.copyWith(privateKey: value) as $Val);
-    });
-  }
+  return $PrivateKeyCopyWith<$Res>(_self.privateKey!, (value) {
+    return _then(_self.copyWith(privateKey: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$DocumentImplCopyWith<$Res>
-    implements $DocumentCopyWith<$Res> {
-  factory _$$DocumentImplCopyWith(
-          _$DocumentImpl value, $Res Function(_$DocumentImpl) then) =
-      __$$DocumentImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      String docType,
-      @DataJsonConverter() Uint8List data,
-      DocDataType docDataType,
-      @JsonKey(includeFromJson: false, includeToJson: false)
-      PrivateKey? privateKey,
-      DateTime createdAt,
-      DateTime? modifiedAt});
-
-  @override
-  $PrivateKeyCopyWith<$Res>? get privateKey;
-}
-
-/// @nodoc
-class __$$DocumentImplCopyWithImpl<$Res>
-    extends _$DocumentCopyWithImpl<$Res, _$DocumentImpl>
-    implements _$$DocumentImplCopyWith<$Res> {
-  __$$DocumentImplCopyWithImpl(
-      _$DocumentImpl _value, $Res Function(_$DocumentImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of Document
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? docType = null,
-    Object? data = null,
-    Object? docDataType = null,
-    Object? privateKey = freezed,
-    Object? createdAt = null,
-    Object? modifiedAt = freezed,
-  }) {
-    return _then(_$DocumentImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      docType: null == docType
-          ? _value.docType
-          : docType // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as Uint8List,
-      docDataType: null == docDataType
-          ? _value.docDataType
-          : docDataType // ignore: cast_nullable_to_non_nullable
-              as DocDataType,
-      privateKey: freezed == privateKey
-          ? _value.privateKey
-          : privateKey // ignore: cast_nullable_to_non_nullable
-              as PrivateKey?,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      modifiedAt: freezed == modifiedAt
-          ? _value.modifiedAt
-          : modifiedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
-  }
-}
 
 /// @nodoc
 @JsonSerializable()
-class _$DocumentImpl extends _Document {
-  _$DocumentImpl(
-      {required this.id,
-      required this.docType,
-      @DataJsonConverter() required this.data,
-      required this.docDataType,
-      @JsonKey(includeFromJson: false, includeToJson: false) this.privateKey,
-      required this.createdAt,
-      this.modifiedAt})
-      : super._();
 
-  factory _$DocumentImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DocumentImplFromJson(json);
+class _Document extends Document {
+   _Document({required this.id, required this.docType, @DataJsonConverter() required this.data, required this.docDataType, @JsonKey(includeFromJson: false, includeToJson: false) this.privateKey, required this.createdAt, this.modifiedAt}): super._();
+  factory _Document.fromJson(Map<String, dynamic> json) => _$DocumentFromJson(json);
 
-  @override
-  final String id;
-  @override
-  final String docType;
-  @override
-  @DataJsonConverter()
-  final Uint8List data;
-  @override
-  final DocDataType docDataType;
+@override final  String id;
+@override final  String docType;
+@override@DataJsonConverter() final  Uint8List data;
+@override final  DocDataType docDataType;
 // ignore: invalid_annotation_target
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  final PrivateKey? privateKey;
-  @override
-  final DateTime createdAt;
-  @override
-  final DateTime? modifiedAt;
+@override@JsonKey(includeFromJson: false, includeToJson: false) final  PrivateKey? privateKey;
+@override final  DateTime createdAt;
+@override final  DateTime? modifiedAt;
 
-  @override
-  String toString() {
-    return 'Document(id: $id, docType: $docType, data: $data, docDataType: $docDataType, privateKey: $privateKey, createdAt: $createdAt, modifiedAt: $modifiedAt)';
-  }
+/// Create a copy of Document
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$DocumentCopyWith<_Document> get copyWith => __$DocumentCopyWithImpl<_Document>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DocumentImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.docType, docType) || other.docType == docType) &&
-            const DeepCollectionEquality().equals(other.data, data) &&
-            (identical(other.docDataType, docDataType) ||
-                other.docDataType == docDataType) &&
-            (identical(other.privateKey, privateKey) ||
-                other.privateKey == privateKey) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
-            (identical(other.modifiedAt, modifiedAt) ||
-                other.modifiedAt == modifiedAt));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      docType,
-      const DeepCollectionEquality().hash(data),
-      docDataType,
-      privateKey,
-      createdAt,
-      modifiedAt);
-
-  /// Create a copy of Document
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DocumentImplCopyWith<_$DocumentImpl> get copyWith =>
-      __$$DocumentImplCopyWithImpl<_$DocumentImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$DocumentImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$DocumentToJson(this, );
 }
 
-abstract class _Document extends Document {
-  factory _Document(
-      {required final String id,
-      required final String docType,
-      @DataJsonConverter() required final Uint8List data,
-      required final DocDataType docDataType,
-      @JsonKey(includeFromJson: false, includeToJson: false)
-      final PrivateKey? privateKey,
-      required final DateTime createdAt,
-      final DateTime? modifiedAt}) = _$DocumentImpl;
-  _Document._() : super._();
-
-  factory _Document.fromJson(Map<String, dynamic> json) =
-      _$DocumentImpl.fromJson;
-
-  @override
-  String get id;
-  @override
-  String get docType;
-  @override
-  @DataJsonConverter()
-  Uint8List get data;
-  @override
-  DocDataType get docDataType; // ignore: invalid_annotation_target
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  PrivateKey? get privateKey;
-  @override
-  DateTime get createdAt;
-  @override
-  DateTime? get modifiedAt;
-
-  /// Create a copy of Document
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DocumentImplCopyWith<_$DocumentImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Document&&(identical(other.id, id) || other.id == id)&&(identical(other.docType, docType) || other.docType == docType)&&const DeepCollectionEquality().equals(other.data, data)&&(identical(other.docDataType, docDataType) || other.docDataType == docDataType)&&(identical(other.privateKey, privateKey) || other.privateKey == privateKey)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.modifiedAt, modifiedAt) || other.modifiedAt == modifiedAt));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,docType,const DeepCollectionEquality().hash(data),docDataType,privateKey,createdAt,modifiedAt);
+
+@override
+String toString() {
+  return 'Document(id: $id, docType: $docType, data: $data, docDataType: $docDataType, privateKey: $privateKey, createdAt: $createdAt, modifiedAt: $modifiedAt)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$DocumentCopyWith<$Res> implements $DocumentCopyWith<$Res> {
+  factory _$DocumentCopyWith(_Document value, $Res Function(_Document) _then) = __$DocumentCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String docType,@DataJsonConverter() Uint8List data, DocDataType docDataType,@JsonKey(includeFromJson: false, includeToJson: false) PrivateKey? privateKey, DateTime createdAt, DateTime? modifiedAt
+});
+
+
+@override $PrivateKeyCopyWith<$Res>? get privateKey;
+
+}
+/// @nodoc
+class __$DocumentCopyWithImpl<$Res>
+    implements _$DocumentCopyWith<$Res> {
+  __$DocumentCopyWithImpl(this._self, this._then);
+
+  final _Document _self;
+  final $Res Function(_Document) _then;
+
+/// Create a copy of Document
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? docType = null,Object? data = null,Object? docDataType = null,Object? privateKey = freezed,Object? createdAt = null,Object? modifiedAt = freezed,}) {
+  return _then(_Document(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,docType: null == docType ? _self.docType : docType // ignore: cast_nullable_to_non_nullable
+as String,data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as Uint8List,docDataType: null == docDataType ? _self.docDataType : docDataType // ignore: cast_nullable_to_non_nullable
+as DocDataType,privateKey: freezed == privateKey ? _self.privateKey : privateKey // ignore: cast_nullable_to_non_nullable
+as PrivateKey?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime,modifiedAt: freezed == modifiedAt ? _self.modifiedAt : modifiedAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,
+  ));
+}
+
+/// Create a copy of Document
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PrivateKeyCopyWith<$Res>? get privateKey {
+    if (_self.privateKey == null) {
+    return null;
+  }
+
+  return $PrivateKeyCopyWith<$Res>(_self.privateKey!, (value) {
+    return _then(_self.copyWith(privateKey: value));
+  });
+}
+}
+
+// dart format on

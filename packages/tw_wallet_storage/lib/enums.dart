@@ -1,9 +1,5 @@
 /// type of data to save in storage
-enum SavedSecureStorageDataType {
-  doc,
-  key,
-  log;
-}
+enum SavedSecureStorageDataType { doc, key, log }
 
 /// Format of document data
 enum DocDataType {

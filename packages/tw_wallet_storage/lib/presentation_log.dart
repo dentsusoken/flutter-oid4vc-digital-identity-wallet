@@ -22,8 +22,7 @@ abstract class PresentationLog with _$PresentationLog {
 
   PresentationLog._();
 
-  factory PresentationLog.fromJson(Map<String, dynamic> json) =>
-      _$PresentationLogFromJson(json);
+  factory PresentationLog.fromJson(Map<String, dynamic> json) => _$PresentationLogFromJson(json);
 
   factory PresentationLog.create({
     String? id,

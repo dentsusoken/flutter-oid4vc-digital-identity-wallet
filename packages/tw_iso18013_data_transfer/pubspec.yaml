@@ -1,0 +1,13 @@
+name: tw_iso18013_data_transfer
+publish_to: none
+version: 0.0.1
+
+environment:
+  sdk: ^3.7.0
+
+resolution: workspace
+
+# dependencies:
+
+dev_dependencies:
+  test: ^1.25.8

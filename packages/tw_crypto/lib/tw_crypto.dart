@@ -2,13 +2,10 @@ library;
 
 import 'dart:typed_data';
 
-import 'package:tw_crypto/ec_curve_type.dart';
+import 'package:tw_crypto/enums.dart';
+import 'package:tw_crypto/tw_crypto_platform.dart';
 
-import 'private_key_type.dart';
-import 'tw_crypto_platform.dart';
-
-export 'private_key_type.dart';
-export 'ec_curve_type.dart';
+export 'enums.dart';
 
 class TwCrypto {
   static Future<Uint8List> createPrivateKey(PrivateKeyType keyType) {

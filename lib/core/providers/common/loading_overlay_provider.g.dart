@@ -13,7 +13,10 @@ String _$loadingOverlayHash() => r'97a946d09bec2a30f03ead0c2c7e7ea01ef073ec';
 final loadingOverlayProvider = NotifierProvider<LoadingOverlay, int>.internal(
   LoadingOverlay.new,
   name: r'loadingOverlayProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$loadingOverlayHash,
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$loadingOverlayHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

@@ -6,9 +6,8 @@ part of 'presentation_log.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PresentationLogImpl _$$PresentationLogImplFromJson(
-        Map<String, dynamic> json) =>
-    _$PresentationLogImpl(
+_PresentationLog _$PresentationLogFromJson(Map<String, dynamic> json) =>
+    _PresentationLog(
       id: json['id'] as String,
       verifierName: json['verifierName'] as String?,
       verifierURL: json['verifierURL'] as String?,
@@ -16,15 +15,16 @@ _$PresentationLogImpl _$$PresentationLogImplFromJson(
       isSuccess: json['isSuccess'] as bool,
       idToken: json['idToken'] as String?,
       vpToken: json['vpToken'] as String?,
-      presentationSubmission: json['presentationSubmission'] == null
-          ? null
-          : PresentationSubmission.fromJson(
-              json['presentationSubmission'] as Map<String, dynamic>),
+      presentationSubmission:
+          json['presentationSubmission'] == null
+              ? null
+              : PresentationSubmission.fromJson(
+                json['presentationSubmission'] as Map<String, dynamic>,
+              ),
       message: json['message'] as String?,
     );
 
-Map<String, dynamic> _$$PresentationLogImplToJson(
-        _$PresentationLogImpl instance) =>
+Map<String, dynamic> _$PresentationLogToJson(_PresentationLog instance) =>
     <String, dynamic>{
       'id': instance.id,
       'verifierName': instance.verifierName,

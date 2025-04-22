@@ -6,10 +6,18 @@ part of 'routes.dart';
 // GoRouterGenerator
 // **************************************************************************
 
-List<RouteBase> get $appRoutes => [$dashboardRoute, $vcIssueSelectRoute, $vpShareRoute];
+List<RouteBase> get $appRoutes => [
+  $dashboardRoute,
+  $vcIssueSelectRoute,
+  $vpShareRoute,
+];
 
-RouteBase get $dashboardRoute =>
-    GoRouteData.$route(path: '/', name: 'dashboard', factory: $DashboardRouteExtension._fromState);
+RouteBase get $dashboardRoute => GoRouteData.$route(
+  path: '/',
+  name: 'dashboard',
+
+  factory: $DashboardRouteExtension._fromState,
+);
 
 extension $DashboardRouteExtension on DashboardRoute {
   static DashboardRoute _fromState(GoRouterState state) => DashboardRoute();
@@ -20,7 +28,8 @@ extension $DashboardRouteExtension on DashboardRoute {
 
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
-  void pushReplacement(BuildContext context) => context.pushReplacement(location);
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
 
   void replace(BuildContext context) => context.replace(location);
 }
@@ -31,14 +40,30 @@ RouteBase get $vcIssueSelectRoute => GoRouteData.$route(
 
   factory: $VcIssueSelectRouteExtension._fromState,
   routes: [
-    GoRouteData.$route(path: 'succeeded', name: 'vc_succeeded', factory: $VcIssueSucceededRouteExtension._fromState),
-    GoRouteData.$route(path: 'document', name: 'vc_document', factory: $VcIssueDocumentRouteExtension._fromState),
-    GoRouteData.$route(path: 'failed', name: 'vc_failed', factory: $VcIssueFailedRouteExtension._fromState),
+    GoRouteData.$route(
+      path: 'succeeded',
+      name: 'vc_succeeded',
+
+      factory: $VcIssueSucceededRouteExtension._fromState,
+    ),
+    GoRouteData.$route(
+      path: 'document',
+      name: 'vc_document',
+
+      factory: $VcIssueDocumentRouteExtension._fromState,
+    ),
+    GoRouteData.$route(
+      path: 'failed',
+      name: 'vc_failed',
+
+      factory: $VcIssueFailedRouteExtension._fromState,
+    ),
   ],
 );
 
 extension $VcIssueSelectRouteExtension on VcIssueSelectRoute {
-  static VcIssueSelectRoute _fromState(GoRouterState state) => VcIssueSelectRoute();
+  static VcIssueSelectRoute _fromState(GoRouterState state) =>
+      VcIssueSelectRoute();
 
   String get location => GoRouteData.$location('/vc');
 
@@ -46,13 +71,15 @@ extension $VcIssueSelectRouteExtension on VcIssueSelectRoute {
 
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
-  void pushReplacement(BuildContext context) => context.pushReplacement(location);
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
 
   void replace(BuildContext context) => context.replace(location);
 }
 
 extension $VcIssueSucceededRouteExtension on VcIssueSucceededRoute {
-  static VcIssueSucceededRoute _fromState(GoRouterState state) => VcIssueSucceededRoute();
+  static VcIssueSucceededRoute _fromState(GoRouterState state) =>
+      VcIssueSucceededRoute();
 
   String get location => GoRouteData.$location('/vc/succeeded');
 
@@ -60,13 +87,15 @@ extension $VcIssueSucceededRouteExtension on VcIssueSucceededRoute {
 
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
-  void pushReplacement(BuildContext context) => context.pushReplacement(location);
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
 
   void replace(BuildContext context) => context.replace(location);
 }
 
 extension $VcIssueDocumentRouteExtension on VcIssueDocumentRoute {
-  static VcIssueDocumentRoute _fromState(GoRouterState state) => VcIssueDocumentRoute();
+  static VcIssueDocumentRoute _fromState(GoRouterState state) =>
+      VcIssueDocumentRoute();
 
   String get location => GoRouteData.$location('/vc/document');
 
@@ -74,13 +103,15 @@ extension $VcIssueDocumentRouteExtension on VcIssueDocumentRoute {
 
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
-  void pushReplacement(BuildContext context) => context.pushReplacement(location);
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
 
   void replace(BuildContext context) => context.replace(location);
 }
 
 extension $VcIssueFailedRouteExtension on VcIssueFailedRoute {
-  static VcIssueFailedRoute _fromState(GoRouterState state) => VcIssueFailedRoute();
+  static VcIssueFailedRoute _fromState(GoRouterState state) =>
+      VcIssueFailedRoute();
 
   String get location => GoRouteData.$location('/vc/failed');
 
@@ -88,7 +119,8 @@ extension $VcIssueFailedRouteExtension on VcIssueFailedRoute {
 
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
-  void pushReplacement(BuildContext context) => context.pushReplacement(location);
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
 
   void replace(BuildContext context) => context.replace(location);
 }
@@ -99,7 +131,12 @@ RouteBase get $vpShareRoute => GoRouteData.$route(
 
   factory: $VpShareRouteExtension._fromState,
   routes: [
-    GoRouteData.$route(path: 'succeeded', name: 'vp_succeeded', factory: $VpShareSucceededRouteExtension._fromState),
+    GoRouteData.$route(
+      path: 'succeeded',
+      name: 'vp_succeeded',
+
+      factory: $VpShareSucceededRouteExtension._fromState,
+    ),
     GoRouteData.$route(
       path: 'history',
       name: 'vp_history',
@@ -126,13 +163,15 @@ extension $VpShareRouteExtension on VpShareRoute {
 
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
-  void pushReplacement(BuildContext context) => context.pushReplacement(location);
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
 
   void replace(BuildContext context) => context.replace(location);
 }
 
 extension $VpShareSucceededRouteExtension on VpShareSucceededRoute {
-  static VpShareSucceededRoute _fromState(GoRouterState state) => VpShareSucceededRoute();
+  static VpShareSucceededRoute _fromState(GoRouterState state) =>
+      VpShareSucceededRoute();
 
   String get location => GoRouteData.$location('/vp/succeeded');
 
@@ -140,13 +179,15 @@ extension $VpShareSucceededRouteExtension on VpShareSucceededRoute {
 
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
-  void pushReplacement(BuildContext context) => context.pushReplacement(location);
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
 
   void replace(BuildContext context) => context.replace(location);
 }
 
 extension $VpHistoryListRouteExtension on VpHistoryListRoute {
-  static VpHistoryListRoute _fromState(GoRouterState state) => VpHistoryListRoute();
+  static VpHistoryListRoute _fromState(GoRouterState state) =>
+      VpHistoryListRoute();
 
   String get location => GoRouteData.$location('/vp/history');
 
@@ -154,13 +195,15 @@ extension $VpHistoryListRouteExtension on VpHistoryListRoute {
 
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
-  void pushReplacement(BuildContext context) => context.pushReplacement(location);
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
 
   void replace(BuildContext context) => context.replace(location);
 }
 
 extension $VpHistoryDetailsRouteExtension on VpHistoryDetailsRoute {
-  static VpHistoryDetailsRoute _fromState(GoRouterState state) => VpHistoryDetailsRoute();
+  static VpHistoryDetailsRoute _fromState(GoRouterState state) =>
+      VpHistoryDetailsRoute();
 
   String get location => GoRouteData.$location('/vp/history/details');
 
@@ -168,7 +211,8 @@ extension $VpHistoryDetailsRouteExtension on VpHistoryDetailsRoute {
 
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
-  void pushReplacement(BuildContext context) => context.pushReplacement(location);
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
 
   void replace(BuildContext context) => context.replace(location);
 }

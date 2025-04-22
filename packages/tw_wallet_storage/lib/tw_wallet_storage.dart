@@ -1,3 +1,5 @@
+library;
+
 export 'data_storage_service.dart';
 export 'document.dart';
 export 'enums.dart';

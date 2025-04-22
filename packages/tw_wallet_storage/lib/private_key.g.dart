@@ -6,13 +6,12 @@ part of 'private_key.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PrivateKeyImpl _$$PrivateKeyImplFromJson(Map<String, dynamic> json) =>
-    _$PrivateKeyImpl(
-      type: $enumDecode(_$PrivateKeyTypeEnumMap, json['type']),
-      value: const DataJsonConverter().fromJson(json['value'] as String),
-    );
+_PrivateKey _$PrivateKeyFromJson(Map<String, dynamic> json) => _PrivateKey(
+  type: $enumDecode(_$PrivateKeyTypeEnumMap, json['type']),
+  value: const DataJsonConverter().fromJson(json['value'] as String),
+);
 
-Map<String, dynamic> _$$PrivateKeyImplToJson(_$PrivateKeyImpl instance) =>
+Map<String, dynamic> _$PrivateKeyToJson(_PrivateKey instance) =>
     <String, dynamic>{
       'type': _$PrivateKeyTypeEnumMap[instance.type]!,
       'value': const DataJsonConverter().toJson(instance.value),

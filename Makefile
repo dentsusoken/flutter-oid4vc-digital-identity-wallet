@@ -40,11 +40,15 @@ slang-watch:
 
 
 lint-fix:
-	dart run import_sorter:main
-	dart run import_path_converter:main
+	dart run import_sorter:main lib/
 	dart fix --apply
 	dart format .
-	flutter analyze
+
+	@for dir in packages/*/ ; do \
+		echo "formatting $$dir" ; \
+		dart run import_sorter:main $$dir\/lib\/* ; \
+		dart format $$dir ; \
+	done
 
 clean:
 	flutter clean

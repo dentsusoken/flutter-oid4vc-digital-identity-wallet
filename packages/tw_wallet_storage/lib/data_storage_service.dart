@@ -11,14 +11,8 @@ abstract class DataStorageService {
   FutureOr<Document?> loadDocument(String id);
   FutureOr<List<Document>?> loadDocuments();
   FutureOr<List<PresentationLog>?> loadPresentationLogs();
-  FutureOr<void> saveDocument(
-    Document document, {
-    bool allowOverwrite = true,
-  });
-  FutureOr<void> savePresentationLog(
-    PresentationLog log, {
-    required SavedSecureStorageDataType dataToSaveType,
-  });
+  FutureOr<void> saveDocument(Document document, {bool allowOverwrite = true});
+  FutureOr<void> savePresentationLog(PresentationLog log, {required SavedSecureStorageDataType dataToSaveType});
   FutureOr<void> deleteDocument(String id);
   FutureOr<void> deleteDocuments();
   FutureOr<void> deletePresentationLog(String id);

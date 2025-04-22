@@ -1,0 +1,28 @@
+name: tw_wallet_kit
+publish_to: none
+version: 0.0.1
+
+environment:
+  sdk: ^3.7.0
+
+resolution: workspace
+
+dependencies:
+  meta: ^1.15.0
+  tw_crypto:
+    path: ../tw_crypto
+  tw_iso18013_data_model:
+    path: ../tw_iso18013_data_model
+  tw_iso18013_data_transfer:
+    path: ../tw_iso18013_data_transfer
+  tw_openid4vci:
+    path: ../tw_openid4vci
+  tw_siop_openid4vp:
+    path: ../tw_siop_openid4vp
+  tw_wallet_storage:
+    path: ../tw_wallet_storage
+  tw_logging:
+    path: ../tw_logging
+
+dev_dependencies:
+  test: ^1.25.8

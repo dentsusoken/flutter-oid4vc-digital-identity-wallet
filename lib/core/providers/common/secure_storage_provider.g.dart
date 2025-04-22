@@ -13,7 +13,10 @@ String _$secureStorageHash() => r'f51b3af335b038207daddeb4c96733299e795157';
 final secureStorageProvider = Provider<FlutterSecureStorage>.internal(
   secureStorage,
   name: r'secureStorageProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$secureStorageHash,
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$secureStorageHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

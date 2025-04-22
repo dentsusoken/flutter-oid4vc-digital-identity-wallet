@@ -9,7 +9,6 @@
 
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-
 import 'package:flutter_svg/flutter_svg.dart' as _svg;
 import 'package:vector_graphics/vector_graphics.dart' as _vg;
 
@@ -17,13 +16,15 @@ class $AssetsIconsGen {
   const $AssetsIconsGen();
 
   /// File path: assets/icons/bluetooth-connect.svg
-  SvgGenImage get bluetoothConnect => const SvgGenImage('assets/icons/bluetooth-connect.svg');
+  SvgGenImage get bluetoothConnect =>
+      const SvgGenImage('assets/icons/bluetooth-connect.svg');
 
   /// File path: assets/icons/ic-edit.svg
   SvgGenImage get icEdit => const SvgGenImage('assets/icons/ic-edit.svg');
 
   /// File path: assets/icons/ic-id-stroke.svg
-  SvgGenImage get icIdStroke => const SvgGenImage('assets/icons/ic-id-stroke.svg');
+  SvgGenImage get icIdStroke =>
+      const SvgGenImage('assets/icons/ic-id-stroke.svg');
 
   /// File path: assets/icons/ic-id.svg
   SvgGenImage get icId => const SvgGenImage('assets/icons/ic-id.svg');
@@ -38,7 +39,8 @@ class $AssetsIconsGen {
   SvgGenImage get icNfc => const SvgGenImage('assets/icons/ic-nfc.svg');
 
   /// File path: assets/icons/ic-qr-scanner.svg
-  SvgGenImage get icQrScanner => const SvgGenImage('assets/icons/ic-qr-scanner.svg');
+  SvgGenImage get icQrScanner =>
+      const SvgGenImage('assets/icons/ic-qr-scanner.svg');
 
   /// File path: assets/icons/ic-user.svg
   SvgGenImage get icUser => const SvgGenImage('assets/icons/ic-user.svg');
@@ -68,9 +70,11 @@ class Assets {
 }
 
 class SvgGenImage {
-  const SvgGenImage(this._assetName, {this.size, this.flavors = const {}}) : _isVecFormat = false;
+  const SvgGenImage(this._assetName, {this.size, this.flavors = const {}})
+    : _isVecFormat = false;
 
-  const SvgGenImage.vec(this._assetName, {this.size, this.flavors = const {}}) : _isVecFormat = true;
+  const SvgGenImage.vec(this._assetName, {this.size, this.flavors = const {}})
+    : _isVecFormat = true;
 
   final String _assetName;
   final Size? size;
@@ -99,9 +103,18 @@ class SvgGenImage {
   }) {
     final _svg.BytesLoader loader;
     if (_isVecFormat) {
-      loader = _vg.AssetBytesLoader(_assetName, assetBundle: bundle, packageName: package);
+      loader = _vg.AssetBytesLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+      );
     } else {
-      loader = _svg.SvgAssetLoader(_assetName, assetBundle: bundle, packageName: package, theme: theme);
+      loader = _svg.SvgAssetLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+        theme: theme,
+      );
     }
     return _svg.SvgPicture(
       loader,
@@ -115,7 +128,9 @@ class SvgGenImage {
       placeholderBuilder: placeholderBuilder,
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
-      colorFilter: colorFilter ?? (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
+      colorFilter:
+          colorFilter ??
+          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,
     );

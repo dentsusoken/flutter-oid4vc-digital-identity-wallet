@@ -1,10 +1,9 @@
 import 'dart:typed_data';
 
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'package:tw_crypto/ec_curve_type.dart';
-import 'package:tw_crypto/private_key_type.dart';
 
-import 'tw_crypto_method_channel.dart';
+import 'package:tw_crypto/enums.dart';
+import 'package:tw_crypto/tw_crypto_method_channel.dart';
 
 abstract class TwCryptoPlatform extends PlatformInterface {
   /// Constructs a TwCryptoPlatform.

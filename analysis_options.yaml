@@ -22,6 +22,7 @@ linter:
     # the Dart Lint rules page to make maintenance easier
     # https://github.com/dart-lang/linter/blob/master/example/all.yaml
     public_member_api_docs: ignore
+    always_use_package_imports: true
 
 custom_lint:
   rules:

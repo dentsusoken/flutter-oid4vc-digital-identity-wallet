@@ -1,4 +1,4 @@
-library tw_logging;
+library;
 
 export 'log_level.dart';
 export 'logger.dart';

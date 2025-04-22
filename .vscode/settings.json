@@ -30,5 +30,49 @@
         "pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.flutter-plugins,.flutter-plugins-dependencies,.metadata",
         "*.dart": "${capture}.g.dart,${capture}.freezed.dart,${capture}.controller.dart"
     },
+    "dartimportsorter.sortOnSave": true,
+    "dartimportsorter.matchingRules": [
+        {
+            "label": "Dart",
+            "regex": "^dart:.*$",
+            "order": 1,
+            "regexFlags": [
+                "m"
+            ]
+        },
+        {
+            "label": "Flutter",
+            "regex": "^package:flutter/.*$",
+            "order": 10,
+            "regexFlags": [
+                "m"
+            ]
+        },
+        {
+            "label": "Package imports that are NOT your app (automatically detected)",
+            "regex": "^package:(?!<app_name>).*$",
+            "order": 100,
+            "regexFlags": [
+                "m"
+            ]
+        },
+        {
+            "label": "Package imports that ARE your app (automatically detected)",
+            "regex": "^package:<app_name>.*$",
+            "order": 101,
+            "regexFlags": [
+                "m"
+            ]
+        },
+        {
+            "label": "Relative",
+            "regex": "^\\..*$",
+            "order": 1000,
+            "regexFlags": [
+                "m"
+            ]
+        }
+    ]
+    ,
     "dart.flutterSdkPath": "~/.asdf/installs/flutter/3.29.0-stable"
 }

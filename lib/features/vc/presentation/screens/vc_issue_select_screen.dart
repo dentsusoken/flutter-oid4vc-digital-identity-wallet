@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:url_launcher/url_launcher.dart';
-
 import 'package:digital_wallet/core/configs/configs.dart';
-import 'package:digital_wallet/core/theme/app_text_style.dart';
+import 'package:digital_wallet/core/providers/providers.dart';
+import 'package:digital_wallet/core/theme/theme.dart';
 import 'package:digital_wallet/core/widgets/widgets.dart';
 import 'package:digital_wallet/gen/gen.dart';
+import 'package:digital_wallet/routes/routes.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class VcIssueSelectScreen extends StatelessWidget {
   const VcIssueSelectScreen({super.key});
@@ -51,11 +52,24 @@ class _VcList extends HookConsumerWidget {
         final vc = vcTypes[index];
         return _VcListItem(
           vc: vc,
-          onTap: () {
-            const url =
-                "${Env.vciIssuerUrl}/api/authorization?client_id=${Env.vciClientId}&response_type=code&scope=org.iso.18013.5.1.mDL%20openid&redirect_uri=${Env.verifierApiUri}";
+          onTap: () async {
+            try {
+              final par = await ref
+                  .read(issuerClientProvider)
+                  .par(
+                    clientId: Env.vciClientId,
+                    responseType: 'code',
+                    scope: 'org.iso.18013.5.1.mDL openid',
+                    redirectUri: Env.vciRedirectUri,
+                    codeChallenge: '-wWUU3X62rCR7Z-zsCrfT7wPxLrticYIzI6mrXSqgzs',
+                  );
+              final url =
+                  "${Env.vciIssuerUrl}/api/authorization?client_id=${Env.vciClientId}&request_uri=${par.requestUri}";
 
-            launchUrl(Uri.parse(url));
+              await launchUrlString(url);
+            } catch (e) {
+              VcIssueFailedRoute().replace(context);
+            }
           },
         );
       },

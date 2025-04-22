@@ -1,0 +1,1 @@
+enum WalletStorageType { secureStorage }

@@ -10,24 +10,12 @@ part 'private_key.g.dart';
 
 @freezed
 abstract class PrivateKey with _$PrivateKey {
-  factory PrivateKey({
-    required PrivateKeyType type,
-    @DataJsonConverter() required Uint8List value,
-  }) = _PrivateKey;
-  factory PrivateKey.fromJson(Map<String, dynamic> json) =>
-      _$PrivateKeyFromJson(json);
+  factory PrivateKey({required PrivateKeyType type, @DataJsonConverter() required Uint8List value}) = _PrivateKey;
+  factory PrivateKey.fromJson(Map<String, dynamic> json) => _$PrivateKeyFromJson(json);
 
-  static Future<PrivateKey> create({
-    PrivateKeyType type = PrivateKeyType.secureEnclaveP256,
-    Uint8List? value,
-  }) async {
-    value ??= await TwLibCrypto.createPrivateKey(
-      type,
-    );
+  static Future<PrivateKey> create({PrivateKeyType type = PrivateKeyType.secureEnclaveP256, Uint8List? value}) async {
+    value ??= await TwCrypto.createPrivateKey(type);
 
-    return PrivateKey(
-      type: type,
-      value: value,
-    );
+    return PrivateKey(type: type, value: value);
   }
 }

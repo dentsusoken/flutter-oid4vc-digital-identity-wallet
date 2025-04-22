@@ -1,9 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:tw_crypto/ec_curve_type.dart';
-import 'package:tw_crypto/private_key_type.dart';
-
-import 'tw_crypto_platform.dart';
+import 'package:tw_crypto/enums.dart';
+import 'package:tw_crypto/tw_crypto_platform.dart';
 
 /// An implementation of [TwCryptoPlatform] that uses method channels.
 class TwCryptoMethodChannel extends TwCryptoPlatform {

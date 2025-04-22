@@ -22,16 +22,14 @@ abstract class Document with _$Document {
     @DataJsonConverter() required Uint8List data,
     required DocDataType docDataType,
     // ignore: invalid_annotation_target
-    @JsonKey(includeFromJson: false, includeToJson: false)
-    PrivateKey? privateKey,
+    @JsonKey(includeFromJson: false, includeToJson: false) PrivateKey? privateKey,
     required DateTime createdAt,
     DateTime? modifiedAt,
   }) = _Document;
 
   Document._();
 
-  factory Document.fromJson(Map<String, dynamic> json) =>
-      _$DocumentFromJson(json);
+  factory Document.fromJson(Map<String, dynamic> json) => _$DocumentFromJson(json);
 
   factory Document.create({
     String? id,
@@ -74,11 +72,7 @@ abstract class Document with _$Document {
 
         final randomId = const Uuid().v4();
 
-        return DocumentCborData(
-          id: randomId,
-          iss: iss,
-          dpk: dpk,
-        );
+        return DocumentCborData(id: randomId, iss: iss, dpk: dpk);
       case DocDataType.cbor:
         final pk = privateKey;
         if (pk == null) {
@@ -90,18 +84,10 @@ abstract class Document with _$Document {
           return null;
         }
 
-        final req = await IssueRequest.create(
-          id: id,
-          privateKeyType: pk.type,
-          keyData: pk.value,
-        );
+        final req = await IssueRequest.create(id: id, privateKeyType: pk.type, keyData: pk.value);
         final dpk = await req.toCoseKeyPrivate();
 
-        return DocumentCborData(
-          id: id,
-          iss: iss,
-          dpk: dpk,
-        );
+        return DocumentCborData(id: id, iss: iss, dpk: dpk);
       case DocDataType.sjtw:
         throw UnimplementedError('format $docDataType not implemented');
     }
